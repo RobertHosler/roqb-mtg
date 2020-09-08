@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+
+hr {
+  border-top: 2px solid #ccc;
+}
+
+.bg-dark {
+  color: $light;
+}
+.bg-dark a {
+  color: $link-color;
+//   text-decoration: underline;
+}
+.bg-dark a:hover {
+  color: $link-hover-color;
+}

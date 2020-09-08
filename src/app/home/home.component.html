@@ -1,0 +1,16 @@
+<div class="">
+  <div class="container">
+    <div class="card-row row">
+      <div class="col-lg-4" *ngFor="let card of cards">
+        <a [routerLink]="card.href"
+          ><div class="card bg-dark">
+            <div class="card-body">
+              <h2>{{ card.title }}</h2>
+              <p>{{ card.description }}</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

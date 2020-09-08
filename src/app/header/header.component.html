@@ -1,0 +1,31 @@
+<div class="header">
+  <nav class="navbar navbar-app bg-dark navbar-expand-md fixed-top">
+    <div class="container">
+      <a class="navbar-brand" routerLink="home">Home</a>
+      <button
+        class="navbar-toggler"
+        [ngClass]="{ collapsed: collapsed }"
+        type="button"
+        (click)="collapsed = !collapsed"
+        aria-controls="navbarCollapseContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" [ngClass]="{ show: !collapsed }">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item" *ngFor="let link of links">
+            <a class="nav-link" [routerLink]="link.location" *ngIf="!link.ext">
+              {{ link.title }}
+            </a>
+            <a class="nav-link" href="{{ link.location }}" *ngIf="link.ext">
+              {{ link.title }}
+            </a>
+          </li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
