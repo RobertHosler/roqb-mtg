@@ -12,7 +12,11 @@ import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { HomeLayoutComponent } from './home-layout/home-layout.component';
+import { HttpClientModule } from '@angular/common/http';
+import { SocketIoConfig, SocketIoModule } from 'ngx-socket-io';
 
+
+const socketConfig: SocketIoConfig = { url: 'http://localhost:3080', options: {} };
 
 @NgModule({
   declarations: [
@@ -27,7 +31,9 @@ import { HomeLayoutComponent } from './home-layout/home-layout.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     FormsModule,
+    SocketIoModule.forRoot(socketConfig),
     TabsModule.forRoot(),
     NgxBootstrapIconsModule.pick(allIcons)
   ],
