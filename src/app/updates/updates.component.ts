@@ -15,12 +15,13 @@ export class UpdatesComponent implements OnInit {
     bullets: string[];
   }[] = [
     {
-      date: '',
-      title: '',
-      lead: '',
+      date: '03.21.2021',
+      title: 'Initial',
+      lead: 'Created site structure',
       bullets: [
-        '',
-        '',
+        'home page layout',
+        'release notes page',
+        'users component'
       ],
     },
   ];

@@ -1,16 +1,86 @@
 <div class="">
-  <div class="container">
-    <div class="card-row row">
-      <div class="col-lg-4" *ngFor="let card of cards">
-        <a [routerLink]="card.href"
-          ><div class="card bg-dark">
-            <div class="card-body">
-              <h2>{{ card.title }}</h2>
-              <p>{{ card.description }}</p>
-            </div>
-          </div>
-        </a>
+  <div class="header-outer">
+    <div class="header">
+      <div class="header-container particle-container">
+        <div class="header-links">
+          <a class="link-underline" href="/dev/resume">Résumé</a>
+          <!-- <a class="link-underline" href="/about">Blog</a> -->
+          <a class="link-underline" href="/person">About me</a>
+        </div>
+        <div class="img-wrapper">
+          <img class="main-img" src="/assets/images/roqbme.png" />
+        </div>
+        <div class="social-links" (mouseenter)="showSocialLinks = true" (mouseleave)="showSocialLinks = false">
+          <span class="social-hover" *ngIf="!showSocialLinks">Social</span>
+          <span *ngIf="showSocialLinks">
+          <a *ngFor="let socialLink of socialLinks" title="{{socialLink.alt}}" href="{{socialLink.destPath}}" target="_blank">
+            <img [alt]="socialLink.alt" src="{{socialLink.imgPath}}"/>
+          </a>
+        </span>
+        </div>
       </div>
     </div>
   </div>
+  <div class="main-container">
+    <ng-container *ngTemplateOutlet="justLinks"></ng-container>
+  </div>
 </div>
+
+<ng-template #justLinks>
+  <div class="just-links">
+    <a [routerLink]="card.href" *ngFor="let card of cards">
+      <div class="just-links-container">
+        <div class="just-links-description">
+          <div class="just-links-description-inner-border">
+            <div class="just-links-description-inner">
+              <h3 class="just-links-heading thick-border-bottom">{{ card.title }}</h3>
+              <p class="just-links-extra">{{ card.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</ng-template>
+
+<ng-template #imageLinks>
+  <div class="particles">
+    <div class="particle" *ngFor="let card of cards">
+      <a [routerLink]="card.href">
+        <div class="particle-container">
+          <div class="particle-inner">
+            <div class="particle-inner-a">
+              <div class="card-image-border">
+                <div class="card-image {{ card.class }}"></div>
+              </div>
+            </div>
+            <div class="particle-inner-b">
+              <div class="card-description">
+                <div class="card-description-inner-border">
+                  <div class="card-description-inner">
+                    <h3 class="card-description-heading">{{ card.title }}</h3>
+                    <p class="card-description-extra">{{ card.description }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="card-row row d-none">
+    <div class="col-md-6 col-xl-4 card-col" *ngFor="let card of cards">
+      <a [routerLink]="card.href"
+        ><div class="card bg-dark">
+          <div class="card-image {{ card.class }}"></div>
+          <div class="card-body">
+            <h2>{{ card.title }}</h2>
+            <!-- <p>{{ card.description }}</p> -->
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="preload-cards"></div>
+</ng-template>

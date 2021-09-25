@@ -1,4 +1,5 @@
 @import "~src/assets/variables";
+@import "node_modules/bootstrap/scss/mixins/_breakpoints";
 
 .navbar {
   // background: $secondary;
@@ -15,4 +16,45 @@
 
 .header {
   min-height: 56px;
+}
+
+.home-link {
+  background-image: url("/assets/images/roqbme-notagline.png");
+  background-size: cover;
+  background-position: top left;
+  width: 186px;
+  height: 66px;
+  margin-top: -.5rem;
+  margin-bottom: -.5rem;
+}
+
+.header {
+  min-height: 66px;
+}
+
+
+.nav-link {
+  color: $light;
+  text-align: center;
+}
+
+@include media-breakpoint-down(sm) {
+  .navbar-collapse {
+    border-top: 1px solid $light;
+    margin-top: .5rem;
+    padding-top: .5rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+  .navbar-nav {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .nav-item {
+    text-align: center;
+  }
+  .nav-link {
+    padding: .5rem;
+    width: 110px;
+  }
 }

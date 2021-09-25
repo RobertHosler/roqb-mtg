@@ -1,7 +1,7 @@
 <div class="header">
-  <nav class="navbar navbar-app bg-dark navbar-expand-md fixed-top">
+  <nav class="navbar navbar-app bg-green navbar-expand-md fixed-top">
     <div class="container">
-      <a class="navbar-brand" routerLink="home">Home</a>
+      <a class="navbar-brand home-link" routerLink="home"><span class="sr-only">Home</span></a>
       <button
         class="navbar-toggler"
         [ngClass]="{ collapsed: collapsed }"
@@ -16,14 +16,13 @@
       <div class="collapse navbar-collapse" [ngClass]="{ show: !collapsed }">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item" *ngFor="let link of links">
-            <a class="nav-link" [routerLink]="link.location" *ngIf="!link.ext">
+            <a class="nav-link link-underline" [routerLink]="link.location" *ngIf="!link.ext">
               {{ link.title }}
             </a>
             <a class="nav-link" href="{{ link.location }}" *ngIf="link.ext">
               {{ link.title }}
             </a>
           </li>
-          <li></li>
         </ul>
       </div>
     </div>

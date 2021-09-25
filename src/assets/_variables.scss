@@ -19,10 +19,17 @@ $pan-green: #02b354;
 $light-pan-green: #02de69;
 $dark-pan-green: #018e43;
 $kelly-green: #4cbb17;
+$youtube-green: #197a2b;
+$soft-green: #e5fae9;
+$green-blaze: #B1D8B7;
 
+$dark-violet: #1c0635;
 $russian-violet: #2c0954;
 $royal-purple: #7850a6;
 $purple: #4b2776;
+$youtube-purple: #7A1968;//8e326c
+$youtube-dark-purple: #7A1968;
+$youtube-light-purple: #8c336b;
 
 $highlight-blue: #4e92f8;
 $highlight-blue: $blue-crayola;
@@ -46,8 +53,8 @@ $yiq-text-light: $light;
 $body-bg: $light;
 $body-color: $dark;
 
-$link-color: $cad-orange;
-$link-hover-color: $pan-green;
+$link-color: $pan-green;
+$link-hover-color: $youtube-purple;//cad-orange
 $link-active-color: $dark-pan-green;
 $link-decoration: none;
 $link-hover-decoration: none;
@@ -55,7 +62,7 @@ $link-hover-decoration: none;
 $nav-link-color: $link-color;
 $nav-tabs-border-color: $purple;
 
-$gradient-border-width: 5px;
+$gradient-border-width: .25rem;
 
 $shadow:  0 2px 8px 0 #777;
 
@@ -76,6 +83,10 @@ $gradients: (
     $pan-green,
     $royal-purple,
   ),
+  "green-blaze": (
+    $kelly-green,
+    $green-blaze
+  ) 
 );
 
 @function gradient($key: "primary", $direction: right) {
@@ -104,3 +115,6 @@ $gradients: (
   border-right: $gradient-border-width solid;
   @include gradient-border($key, bottom);
 }
+
+$primary-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$secondary-font-family: monospace;

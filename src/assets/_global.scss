@@ -9,8 +9,117 @@ hr {
 }
 .bg-dark a {
   color: $link-color;
-//   text-decoration: underline;
 }
 .bg-dark a:hover {
   color: $link-hover-color;
+}
+
+.bg-blaze {
+  background: $green-blaze;
+}
+.bg-gray {
+  background: $dim-gray;
+}
+.bg-green {
+  color: $light;
+  background-color: $youtube-green;
+}
+
+.vertical {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  // background: gradient('green-blaze', top);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+.branding {
+  color: $cad-orange;
+  font-family: monospace;
+  @include gradient-border-left("secondary");
+  @include gradient-border-right("secondary");
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
+.left-gradient-primary {
+  padding-left: .5rem;
+  margin-left: -.75rem;
+  @include gradient-border-left("primary");
+}
+
+.left-gradient-secondary {
+  padding-left: .5rem;
+  @include gradient-border-left("secondary");
+}
+
+.thick-border-bottom {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 5px;
+  border-bottom: 5px solid $youtube-green;
+  &::before {
+    content: "";
+    border-bottom: 1px solid $light;
+    position: absolute;
+    bottom: 0px;
+    display: inline-block;
+    width: 100%;
+  }
+}
+a:hover .thick-border-bottom {
+  border-bottom: 5px solid $youtube-purple;
+}
+
+.monospace {
+  font-family: monospace;
+}
+
+.link-underline {
+  display: inline-block;
+  // color: white;
+  margin-left: 2px;
+  margin-right: 2px;
+  position: relative;
+  padding: 3px 8px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  &:hover {
+    color: $light;
+    border-radius: 5px;
+    background-color: $youtube-purple;
+  }
+}
+.link-underline::before {
+  content: "";
+  border-bottom: 2px solid $youtube-purple;
+  position: absolute;
+  left: 4px;
+  bottom: 4px;
+  display: inline-block;
+  width: calc(100% - 8px);
+}
+.link-underline:hover::before {
+  border-bottom: 2px solid $light;
+}
+
+blockquote {
+  margin: 0;
+}
+
+figure {
+  padding: 15px;
+  background: $soft-green;
+  border-radius: 5px;
+  blockquote {
+    font-size: 1.25rem;
+  }
 }

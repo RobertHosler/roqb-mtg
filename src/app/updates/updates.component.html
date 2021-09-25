@@ -3,7 +3,7 @@
 <div *ngFor="let update of updates">
   <div *ngIf="update.title.trim().length > 0">
     <h2>{{ update.date }} - {{ update.title }}</h2>
-    <p>{{ update.lead }}</p>
+    <div>{{ update.lead }}</div>
     <div *ngIf="update.bullets.length > 0">
       <ul>
         <li *ngFor="let bullet of update.bullets">

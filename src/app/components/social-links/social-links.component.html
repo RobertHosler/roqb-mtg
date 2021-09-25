@@ -1,0 +1,17 @@
+<div
+  class="social-links"
+  (mouseenter)="hoverSocialLinks"
+  (mouseleave)="endHoverSocialLinks"
+>
+  <span class="social-hover" *ngIf="!showSocialLinks">Social</span>
+  <span *ngIf="showSocialLinks">
+    <a
+      *ngFor="let socialLink of socialLinks"
+      title="{{ socialLink.alt }}"
+      href="{{ socialLink.destPath }}"
+      target="_blank"
+    >
+      <img [alt]="socialLink.alt" src="{{ socialLink.imgPath }}" />
+    </a>
+  </span>
+</div>
