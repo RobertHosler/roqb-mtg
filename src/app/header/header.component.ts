@@ -1,5 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { routes } from '../app-routing.module';
+import { headerInfo } from '../data/header';
 import { MainLayoutComponent } from '../layout/main-layout/main-layout.component';
 
 @Component({
@@ -62,8 +63,4 @@ class HeaderLink {
   location: string;
   title: string;
   ext: boolean;
-}
-
-export const headerInfo = {
-  headerHeight: 68
 }

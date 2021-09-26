@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Image } from '../components/img-list/img-list.component';
-import { headerInfo } from '../header/header.component';
+import { headerInfo } from '../data/header';
 
 @Component({
   selector: 'app-dev',
