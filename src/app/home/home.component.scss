@@ -142,7 +142,7 @@ a:hover .bg-dark.card {
 }
 .card-description-heading {
   position: relative;
-  font-size: 40px;
+  font-size: 2rem;
   padding-bottom: 5px;
   border-bottom: 5px solid $youtube-green;
   // @include gradient-border-bottom();
@@ -171,7 +171,7 @@ a:hover .bg-dark.card {
     display: inline-block;
   }
   .card-description-heading {
-    font-size: 40px;
+    font-size: 2rem;
     border-bottom: 5px solid $youtube-purple;
     // @include gradient-border-bottom('purple');
   }
@@ -272,11 +272,62 @@ a:hover .bg-dark.card {
 }
 
 .just-links {
-  background: linear-gradient(123deg, rgba(122,25,104,1) 0%, rgba(140,51,107,1) 100%);
+  background: $youtube-purple;
+  background: $gradient-purple-center;
+  // background: #333;
+  height: 100vh;
+  a {
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
+@include media-breakpoint-up(lg) {
+  .just-links {
+    // background: $gradient-purple-center;
+  }
+}
+.just-links-description-inner {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@include media-breakpoint-up(md) {
+  .just-links-description-inner {
+    width: 66%;
+  }
+}
+.just-links a:nth-child(even) .just-links-description-inner-border {
+  text-align: right;
+  .just-links-heading-wrapper {
+    margin-right: -0.5rem;
+  }
+}
+.just-links a:nth-child(odd) .just-links-description-inner-border {
+  text-align: left;
+  .just-links-heading-wrapper {
+    margin-left: -0.5rem;
+  }
+}
+// @include media-breakpoint-up(xl) {
+//   .just-links-description-inner {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+//     width: 66%;
+//     margin-left: auto;
+//     margin-right: auto;
+//     .just-links-extra {
+//       margin-left: 3rem;
+//       align-self: end;
+//     }
+//   }
+// }
+
 .just-links a {
-  display: block;
+  // display: block;
   width: 100%;
   color: $light;
   // background-color: $youtube-purple;
@@ -284,23 +335,31 @@ a:hover .bg-dark.card {
   .just-links-extra {
     // visibility: hidden;
   }
+  .just-links-heading-wrapper {
+    padding: 0 0.5rem;
+    display: inline-block;
+  }
   &:hover {
-    background-color: $youtube-green;
+    .just-links-heading-wrapper {
+      background-color: $youtube-green;
+      border-radius: 5px;
+    }
     .just-links-extra {
       // visibility: visible;
+      // text-decoration: underline;
     }
   }
 }
 .just-links-heading {
-  font-size: 40px;
+  font-size: 2rem;
 }
 @include media-breakpoint-down(sm) {
   .just-links-heading {
-    font-size: 30px;
+    font-size: 1.5rem;
   }
 }
 .just-links-container {
-  padding: 2rem 1rem;
+  // padding: 2rem 1rem;
   text-align: center;
 }
 
@@ -370,6 +429,9 @@ a:hover .human-card {
     width: auto;
     height: 1.25rem;
   }
+}
+.social-links-expanded {
+  background: #ffffffcf;
 }
 
 .social-hover {

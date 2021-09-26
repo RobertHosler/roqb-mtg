@@ -40,7 +40,7 @@ $highlight-blue: $blue-crayola;
 $highlight-green: #2affdc;
 
 $primary: $dark-pan-green;
-$secondary: $purple;
+$secondary: $youtube-purple;
 
 // $secondary: $cad-orange;
 // $primary: $royal-purple;
@@ -91,6 +91,14 @@ $gradients: (
     $kelly-green,
     $green-blaze
   ) 
+);
+
+$gradient-purple-center: linear-gradient(
+  to right,
+  black -50%,
+  $youtube-purple 25%,
+  $youtube-purple 75%,
+  black 150%
 );
 
 @function gradient($key: "primary", $direction: right) {

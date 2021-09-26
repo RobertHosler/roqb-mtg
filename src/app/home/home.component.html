@@ -3,21 +3,32 @@
     <div class="header">
       <div class="header-container particle-container">
         <div class="header-links">
-          <a class="link-underline" href="/dev/resume">Résumé</a>
+          <a class="link-underline" [routerLink]="'/dev/resume'">Résumé</a>
           <!-- <a class="link-underline" href="/about">Blog</a> -->
-          <a class="link-underline" href="/person">About me</a>
+          <a class="link-underline" [routerLink]="'/person'">About me</a>
         </div>
         <div class="img-wrapper">
           <img class="main-img" src="/assets/images/roqbme.png" />
         </div>
-        <div class="social-links" (mouseenter)="showSocialLinks = true" (mouseleave)="showSocialLinks = false">
+        <button
+          class="social-links"
+          (click)="showSocialLinks = true"
+          (mouseenter)="showSocialLinks = true"
+          (mouseleave)="showSocialLinks = false"
+          [ngClass]="{ 'social-links-expanded': showSocialLinks }"
+        >
           <span class="social-hover" *ngIf="!showSocialLinks">Social</span>
           <span *ngIf="showSocialLinks">
-          <a *ngFor="let socialLink of socialLinks" title="{{socialLink.alt}}" href="{{socialLink.destPath}}" target="_blank">
-            <img [alt]="socialLink.alt" src="{{socialLink.imgPath}}"/>
-          </a>
-        </span>
-        </div>
+            <a
+              *ngFor="let socialLink of socialLinks"
+              title="{{ socialLink.alt }}"
+              href="{{ socialLink.destPath }}"
+              target="_blank"
+            >
+              <img [alt]="socialLink.alt" src="{{ socialLink.imgPath }}" />
+            </a>
+          </span>
+        </button>
       </div>
     </div>
   </div>
@@ -33,7 +44,11 @@
         <div class="just-links-description">
           <div class="just-links-description-inner-border">
             <div class="just-links-description-inner">
-              <h3 class="just-links-heading thick-border-bottom">{{ card.title }}</h3>
+              <div class="just-links-heading-wrapper">
+                <h3 class="just-links-heading thick-border-bottom">
+                  {{ card.title }}
+                </h3>
+              </div>
               <p class="just-links-extra">{{ card.description }}</p>
             </div>
           </div>

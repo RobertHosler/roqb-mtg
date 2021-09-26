@@ -1,12 +1,18 @@
+@import "~src/assets/variables";
 
 .ops-img {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center left;
+  background-image: url("/assets/images/developer/ops-dashboard.PNG");
+  margin-bottom: 1rem;
+  &:hover {
+    background-image: url("/assets/images/developer/ops-visual.PNG");
+  }
+}
+
+.img-pro-exp {
+    max-width: 550px;
     width: 100%;
-    height: 300px; 
-    background-size: cover;
-    background-position: center left;
-    background-image: url("/assets/images/developer/ops-dashboard.PNG");
-    margin-bottom: 1rem;
-    &:hover {
-        background-image: url("/assets/images/developer/ops-visual.PNG");
-    }
 }

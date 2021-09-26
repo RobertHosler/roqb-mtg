@@ -93,12 +93,6 @@ h4 {
     margin-bottom: 1rem;
   }
 }
-@include media-breakpoint-up(sm) {
-  .resume-buttons {
-    text-align: right;
-  }
-}
-
 @include media-breakpoint-up(md) {
   .education-col {
     // border-right: 2px solid #ccc;

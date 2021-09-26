@@ -28,12 +28,12 @@ export const routes: Routes = [
     component: MainLayoutComponent,
     children: [{ path: '', component: WriteComponent }],
   },
-  {
-    path: 'gamer',
-    data: { name: 'Gamer', header: true },
-    component: MainLayoutComponent,
-    children: [{ path: '', component: GamerComponent }],
-  },
+  // {
+  //   path: 'gamer',
+  //   data: { name: 'Gamer', header: true },
+  //   component: MainLayoutComponent,
+  //   children: [{ path: '', component: GamerComponent }],
+  // },
   {
     path: 'art',
     data: { name: 'Artist', header: true },

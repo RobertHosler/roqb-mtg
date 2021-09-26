@@ -11,6 +11,7 @@ export class SocialLinksComponent implements OnInit {
   @Input()
   hoverEnabled = false;
 
+  @Input()
   socialLinks: SocialLink[];
 
   showSocialLinks = true;
@@ -18,9 +19,9 @@ export class SocialLinksComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.socialLinks = social.links;
-    this.socialLinks.forEach(link => {
-    });
+    if (!this.socialLinks) {
+      this.socialLinks = social.links;
+    }
   }
 
   hoverSocialLinks() {

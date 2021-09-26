@@ -1,5 +1,7 @@
-<div *ngFor="let row of textArray">
-  <p [innerHtml]="row"></p>
-</div>
+<div class="container py-3">
+  <div *ngFor="let row of textArray">
+    <p [innerHtml]="row"></p>
+  </div>
 
-<app-social-links></app-social-links>
+  <app-social-links [socialLinks]="personalSocialLinks"></app-social-links>
+</div>

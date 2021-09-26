@@ -1,4 +1,4 @@
-<h1>I am a Person</h1>
+<h1>Person</h1>
 
 Why hello there, and thank you for stopping by my website.
 

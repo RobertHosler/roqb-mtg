@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { social } from '../data/social-links';
 
 @Component({
   selector: 'app-person',
@@ -8,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonComponent implements OnInit {
   textArray: string[];
+  personalSocialLinks = social.personal;
 
   constructor(private httpClient: HttpClient) {}
 

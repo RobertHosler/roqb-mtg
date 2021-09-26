@@ -1,0 +1,18 @@
+@import "~src/assets/variables";
+@import "~node_modules/bootstrap/scss/mixins/breakpoints";
+
+.page-header {
+  background: $youtube-purple;
+  background: $gradient-purple-center;
+  padding: 1rem;
+  color: $light;
+}
+
+.header-fixed {
+  height: 5rem;
+  .page-header {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+  }
+}

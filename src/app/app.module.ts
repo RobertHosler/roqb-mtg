@@ -23,6 +23,8 @@ import { ResumeComponent } from './dev/resume/resume.component';
 import { ImgListComponent } from './components/img-list/img-list.component';
 import { SocialLinksComponent } from './components/social-links/social-links.component';
 import { WriteComponent } from './write/write.component';
+import { PageHeadingComponent } from './components/page-heading/page-heading.component';
+import { VpSectionComponent } from './components/vp-section/vp-section.component';
 
 
 const socketConfig: SocketIoConfig = { url: 'http://localhost:3080', options: {} };
@@ -44,7 +46,9 @@ const socketConfig: SocketIoConfig = { url: 'http://localhost:3080', options: {}
     ResumeComponent,
     ImgListComponent,
     SocialLinksComponent,
-    WriteComponent
+    WriteComponent,
+    PageHeadingComponent,
+    VpSectionComponent
   ],
   imports: [
     BrowserModule,

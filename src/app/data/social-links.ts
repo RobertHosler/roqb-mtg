@@ -6,7 +6,7 @@ export class SocialLink {
 
 const youtubeLink = new SocialLink();
 youtubeLink.alt = 'YouTube';
-youtubeLink.destPath = 'YouTube';
+youtubeLink.destPath = 'https://www.youtube.com/c/roqbinreality';
 youtubeLink.imgPath = '/assets/images/youtubeLogoRed.png';
 
 const linkedinLink = new SocialLink();
@@ -18,6 +18,11 @@ const facebookLink = new SocialLink();
 facebookLink.alt = 'Facebook';
 facebookLink.destPath = 'https://www.facebook.com/roqbthepirate/';
 facebookLink.imgPath = '/assets/images/facebookLogo.png';
+
+const spFacebookLink = new SocialLink();
+spFacebookLink.alt = 'Facebook';
+spFacebookLink.destPath = 'https://www.facebook.com/SubjectivePersonality/';
+spFacebookLink.imgPath = '/assets/images/facebookLogo.png';
 
 const discordLink = new SocialLink();
 discordLink.alt = 'Discord';
@@ -39,13 +44,25 @@ instagramLink.alt = 'Instagram';
 instagramLink.destPath = 'https://www.instagram.com/roqb.me/';
 instagramLink.imgPath = '/assets/images/instagramLogo.png';
 
+const spTwitterLink = new SocialLink();
+spTwitterLink.alt = 'Twitter';
+spTwitterLink.destPath = 'https://twitter.com/SubjectivePBlog/';
+spTwitterLink.imgPath = '/assets/images/twitterLogoBlue.svg';
+
 const twitterLink = new SocialLink();
 twitterLink.alt = 'Twitter';
-twitterLink.destPath = 'https://twitter.com/SubjectivePBlog/';
+twitterLink.destPath = 'https://twitter.com/RoqbThePirate/';
 twitterLink.imgPath = '/assets/images/twitterLogoBlue.svg';
 
 const gmailLink = new SocialLink();
+gmailLink.alt = 'Email';
 gmailLink.destPath = 'mailto:rph731@gmail.com';
+gmailLink.imgPath = '/assets/images/gmail.png';
+
+const spLink = new SocialLink();
+spLink.alt = 'Subjective Personality Blog';
+spLink.destPath = 'http://subjectivepersonality.wordpress.com/';
+spLink.imgPath = '/assets/images/sp-logo.png';
 
 export const social = {
   youtube: youtubeLink,
@@ -56,6 +73,8 @@ export const social = {
   discord: discordLink,
   linkedin: linkedinLink,
   facebook: facebookLink,
+  spFacebook: spFacebookLink,
+  gmail: gmailLink,
   links: [
     youtubeLink,
     githubLink,
@@ -66,4 +85,24 @@ export const social = {
     linkedinLink,
     facebookLink,
   ],
+  pro: [
+    linkedinLink,
+    githubLink,
+    gmailLink,
+  ],
+  personal: [
+    facebookLink,
+    twitterLink,
+    instagramLink,
+    tiktokLink,
+    youtubeLink,
+    githubLink,
+    discordLink,
+    gmailLink
+  ],
+  spLinks: [
+    spLink,
+    spFacebookLink,
+    spTwitterLink
+  ]
 };

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { social } from '../data/social-links';
 
 @Component({
   selector: 'app-home',
@@ -55,52 +56,53 @@ export class HomeComponent implements OnInit {
     this.devCard,
     this.writeCard,
     this.artCard,
-    this.gamerCard,
+    // this.gamerCard,
     this.humanCard,
   ];
 
-  socialLinks = [
-    {
-      alt: 'YouTube',
-      destPath: 'https://www.youtube.com/c/roqbinreality',
-      imgPath: '/assets/images/youtubeLogoRed.png'
-    },
-    // {
-    //   alt: 'LinkedIn',
-    //   destPath: 'https://www.linkedin.com/in/robert-hosler-885074106/',
-    //   imgPath: '/assets/images/linkedinLogo.png'
-    // },
-    {
-      alt: 'Facebook',
-      destPath: 'https://www.facebook.com/roqbthepirate/',
-      imgPath: '/assets/images/facebookLogo.png'
-    },
-    {
-      alt: 'Twitter',
-      destPath: 'https://twitter.com/SubjectivePBlog/',
-      imgPath: '/assets/images/twitterLogoBlue.svg'
-    },
-    {
-      alt: 'Instagram',
-      destPath: 'https://www.instagram.com/roqb.me/',
-      imgPath: '/assets/images/instagramLogo.png'
-    },
-    {
-      alt: 'TikTok',
-      destPath: 'https://vm.tiktok.com/ZMdqy25sL/',
-      imgPath: '/assets/images/tiktokLogo.svg'
-    },
-    {
-      alt: 'GitHub',
-      destPath: 'https://github.com/RobertHosler',
-      imgPath: '/assets/images/githubLightLogo.png'
-    },
-    {
-      alt: 'Discord',
-      destPath: 'https://www.discordapp.com/users/495057201006772244',
-      imgPath: '/assets/images/discordLogo.svg'
-    }
-  ];
+  socialLinks = social.links;
+  // [
+  //   {
+  //     alt: 'YouTube',
+  //     destPath: 'https://www.youtube.com/c/roqbinreality',
+  //     imgPath: '/assets/images/youtubeLogoRed.png'
+  //   },
+  //   // {
+  //   //   alt: 'LinkedIn',
+  //   //   destPath: 'https://www.linkedin.com/in/robert-hosler-885074106/',
+  //   //   imgPath: '/assets/images/linkedinLogo.png'
+  //   // },
+  //   {
+  //     alt: 'Facebook',
+  //     destPath: 'https://www.facebook.com/roqbthepirate/',
+  //     imgPath: '/assets/images/facebookLogo.png'
+  //   },
+  //   {
+  //     alt: 'Twitter',
+  //     destPath: 'https://twitter.com/SubjectivePBlog/',
+  //     imgPath: '/assets/images/twitterLogoBlue.svg'
+  //   },
+  //   {
+  //     alt: 'Instagram',
+  //     destPath: 'https://www.instagram.com/roqb.me/',
+  //     imgPath: '/assets/images/instagramLogo.png'
+  //   },
+  //   {
+  //     alt: 'TikTok',
+  //     destPath: 'https://vm.tiktok.com/ZMdqy25sL/',
+  //     imgPath: '/assets/images/tiktokLogo.svg'
+  //   },
+  //   {
+  //     alt: 'GitHub',
+  //     destPath: 'https://github.com/RobertHosler',
+  //     imgPath: '/assets/images/githubLightLogo.png'
+  //   },
+  //   {
+  //     alt: 'Discord',
+  //     destPath: 'https://www.discordapp.com/users/495057201006772244',
+  //     imgPath: '/assets/images/discordLogo.svg'
+  //   }
+  // ];
 
   showSocialLinks = false;
 
