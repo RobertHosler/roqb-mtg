@@ -1,35 +1,44 @@
 <div class="">
   <div class="viewport-section d-flex flex-column radial-purple">
     <div class="container flex-around flex-grow-1 py-3">
-      <h2 class="text-left">
-        <span class="sr-only">Professional Experience</span>
+      <div class="dev-heading">
+        <h2 class="text-left">
+          <span class="sr-only">Professional Experience</span>
+          <img
+            class="img-pro-exp"
+            src="/assets/images/developer/professional-experience.png"
+          />
+        </h2>
         <img
-          class="img-pro-exp"
-          src="/assets/images/developer/professional-experience.png"
+          class="img-dev-laptop"
+          src="/assets/images/developer/laptop3.gif"
         />
-      </h2>
+      </div>
       <div class="w-75 mx-auto text-justify">
-        <p>
+        <p *ngIf="false">
           I'm a web developer with 8+ years of experience working for Highmark
           Inc. supporting apps for our subsidiary United Concordia Dental's
-          members.
+          members. The user's web experience starts and ends with the
+          functionality in their browser, and I want to makе that as smooth and
+          painless as possible.
         </p>
+        <p>Hey, I'm Roqb.</p>
         <p>
-          I am passionate about responsive design with an active desire to
-          explore the latest in frontend web technologies. I strongly believe
-          that the user's web experience starts and ends with the functionality
-          in their browser, so it must be made as smooth, painless, and engaging
-          as possible.
+          I am a web developer who is passionate about responsive design and
+          creating engaging uesr experiences.
         </p>
       </div>
-      <div class="btn-row text-right">
-        <a [routerLink]="'resume'" class="btn btn-primary">View Résumé </a>
-        <a
-          class="btn btn-outline-primary"
-          href="https://www.linkedin.com/in/robert-hosler-885074106/"
-          target="_blank"
-          >Connect on Linkedin
-        </a>
+      <div class="dev-section">
+        <img class="img-dev-java" src="/assets/images/developer/java.gif" />
+        <div class="btn-row text-right">
+          <a [routerLink]="'resume'" class="btn btn-primary">View Résumé </a>
+          <a
+            class="btn btn-outline-primary"
+            href="https://www.linkedin.com/in/robert-hosler-885074106/"
+            target="_blank"
+            >Connect on Linkedin
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -43,7 +52,7 @@
           related to my interests. A few notable examples are listed below and
           publicly available on my Github.
         </p>
-      </div>  
+      </div>
       <div class="btn-row">
         <button
           class="btn btn-secondary"

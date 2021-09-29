@@ -169,9 +169,12 @@ figure {
     margin-right: 1rem;
   }
 }
-@include media-breakpoint-down("xs", $grid-breakpoints) {
-  .btn-row.text-right {
-    text-align: left !important;
+@include media-breakpoint-down("sm", $grid-breakpoints) {
+  .btn-row {
+    .btn {
+      width: 100%;
+      margin-right: none;
+    }
   }
 }
 

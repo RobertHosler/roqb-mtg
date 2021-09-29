@@ -1,4 +1,5 @@
 @import "~src/assets/variables";
+@import "node_modules/bootstrap/scss/mixins/_breakpoints";
 
 .ops-img {
   width: 100%;
@@ -13,6 +14,56 @@
 }
 
 .img-pro-exp {
-    max-width: 550px;
+  max-width: 550px;
+  width: 100%;
+}
+
+.dev-section,
+.dev-heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.img-dev-laptop {
+  width: 25vw;
+  max-width: 300px;
+  top: 15%;
+  right: 5%;
+}
+.img-dev-java {
+  height: 20vw;
+  max-height: 300px;
+  bottom: 10%;
+  left: 5%;
+}
+@include media-breakpoint-up(lg) {
+  .img-dev-java,
+  .img-dev-laptop {
+    position: absolute;
+  }
+  .dev-section .btn-row {
     width: 100%;
+  }
+}
+@include media-breakpoint-down(sm) {
+  .dev-section,
+  .dev-heading {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .img-dev-laptop {
+    width: 33vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .img-dev-java {
+    height: 20vw;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.radial-purple {
+  // background-image: url("/assets/images/developer/dev-laptop.PNG");
 }
