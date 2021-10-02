@@ -7,10 +7,13 @@
           <!-- <a class="link-underline" href="/about">Blog</a> -->
           <a class="link-underline" [routerLink]="'/person'">About me</a>
         </div>
-        <div class="img-wrapper">
-          <img class="main-img" src="/assets/images/roqbme.png" />
+        <div class="sr-only">
+          class="sr-only"
+          <h1>Roqb.me</h1>
+          <p class="lead">this is me. on the the internet. hi.</p>
         </div>
         <button
+          *ngIf="false"
           class="social-links"
           (click)="showSocialLinks = true"
           (mouseenter)="showSocialLinks = true"
@@ -33,12 +36,13 @@
     </div>
   </div>
   <div class="main-container">
-    <ng-container *ngTemplateOutlet="justLinks"></ng-container>
+    <ng-container *ngTemplateOutlet="imageLinks2"></ng-container>
   </div>
 </div>
 
 <ng-template #justLinks>
   <div class="just-links">
+    <!-- [ngStyle]="{'background-image': 'url(' + card.img + ')'}" -->
     <a [routerLink]="card.href" *ngFor="let card of cards">
       <div class="just-links-container">
         <div class="just-links-description">
@@ -51,6 +55,7 @@
               </div>
               <p class="just-links-extra">{{ card.description }}</p>
             </div>
+            <img *ngIf="card.img" [src]="card.img" />
           </div>
         </div>
       </div>
@@ -75,6 +80,54 @@
                   <div class="card-description-inner">
                     <h3 class="card-description-heading">{{ card.title }}</h3>
                     <p class="card-description-extra">{{ card.description }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="card-row row d-none">
+    <div class="col-md-6 col-xl-4 card-col" *ngFor="let card of cards">
+      <a [routerLink]="card.href"
+        ><div class="card bg-dark">
+          <div class="card-image {{ card.class }}"></div>
+          <div class="card-body">
+            <h2>{{ card.title }}</h2>
+            <!-- <p>{{ card.description }}</p> -->
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="preload-cards"></div>
+</ng-template>
+
+<ng-template #imageLinks2>
+  <div class="particles particles-2">
+    <div class="particle" *ngFor="let card of cards">
+      <a [routerLink]="card.href">
+        <div class="particle-container">
+          <div class="particle-inner">
+            <div class="particle-inner-img">
+              <div class="card-image-border">
+                <div class="card-image">
+                  <img *ngIf="card.img" [src]="card.img" />
+                </div>
+              </div>
+            </div>
+            <div class="particle-inner-txt">
+              <div class="card-description">
+                <div class="card-description-inner-border">
+                  <div class="card-description-inner">
+                    <div class="card-heading-wrapper">
+                      <h3 class="card-description-heading">{{ card.title }}</h3>
+                    </div>
+                    <div class="card-description-extra">
+                      {{ card.description }}
+                    </div>
                   </div>
                 </div>
               </div>

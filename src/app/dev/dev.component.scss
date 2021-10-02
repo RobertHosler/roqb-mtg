@@ -25,14 +25,14 @@
   justify-content: space-between;
 }
 .img-dev-laptop {
-  width: 25vw;
-  max-width: 300px;
+  max-height: 25vh;
+  max-width: 25vw;
   top: 15%;
   right: 5%;
 }
 .img-dev-java {
-  height: 20vw;
-  max-height: 300px;
+  max-height: 25vh;
+  max-width: 25vw;
   bottom: 10%;
   left: 5%;
 }
@@ -55,10 +55,10 @@
     width: 33vw;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 2rem;
   }
   .img-dev-java {
-    height: 20vw;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     margin-left: auto;
     margin-right: auto;
   }

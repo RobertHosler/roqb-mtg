@@ -18,8 +18,9 @@ export class HomeComponent implements OnInit {
   devCard: HomeCard = {
     href: '/dev',
     title: 'Developer',
-    description: 'With 8+ years of experience in web development',
+    description: 'with 8+ years of experience in web development',
     class: 'dev-card',
+    img: '/assets/images/developer/laptop2.gif'
   };
 
   gamerCard: HomeCard = {
@@ -41,22 +42,29 @@ export class HomeComponent implements OnInit {
     title: 'Writer',
     description: 'Blogging and tweeting about personality theory and more',
     class: 'write-card',
+    img: '/assets/images/developer/laptop2.gif'
+  };
+
+  creatorCard: HomeCard = {
+    href: '/write',
+    title: 'Creator',
+    description: 'blogging, drawing, and creating stuff around the web',
+    class: 'write-card',
+    img: '/assets/images/paint-self.gif'
   };
 
   humanCard: HomeCard = {
     href: '/person',
     title: 'Person',
-    description: 'Not a robot, but a person just like you', //Surprisingly
+    description: 'not a robot, but a person just like you', //Surprisingly
     // description: 'Learn more about me',
     class: 'human-card',
+    img: '/assets/images/roqb-rotate.gif'
   };
 
   cards: HomeCard[] = [
-    // this.updateCard,
     this.devCard,
-    this.writeCard,
-    this.artCard,
-    // this.gamerCard,
+    this.creatorCard,
     this.humanCard,
   ];
 
@@ -116,4 +124,5 @@ class HomeCard {
   title: string;
   description: string;
   class: string;
+  img?: string;
 }

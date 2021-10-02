@@ -1,0 +1,69 @@
+<app-vp-section heading="OPS Type Analyzer" [maxWidth]="true" [links]="spLinks">
+  <div class="row">
+    <div class="col-12 col-lg-6">
+      <p>
+        The
+        <a
+          href="https://subjectivepersonality.wordpress.com/2020/08/19/what-is-ops/"
+          target="_blank"
+          >Objective Personality System</a
+        >
+        (OPS) is a personality typology system developed by Dave and Shannon
+        Powers based on the theories of Carl Jung. While the more well known
+        Myers Briggs Type Indicator has 16 types, their system adds additional
+        layers of complexity to create 512 unique types. This app generates a
+        type description and visual aid for each of the 512 types in the system
+        by combining various definitions for each of the coins.
+      </p>
+      <p>
+        This app is hosted on the
+        <a href="http://subjectivepersonality.com/" target="_blank"
+          >subjectivepersonality domain</a
+        >, which was created to host a wordpress blog that I started with
+        another member of the community in an attempt to better organize and
+        distribute some of the information pertaining to the system to those
+        interested.
+      </p>
+    </div>
+
+    <div class="col-12 col-lg-6">
+      <app-img-list class="mb-3 img-list" [list]="opsImages"></app-img-list>
+    </div>
+  </div>
+
+  <p>
+    The app was developed using Angular and first launched in July 2020. As of
+    July 2021 it has served over 2000 unique visitors according to Google
+    Analytics data. It is hosted by Heroku.
+  </p>
+</app-vp-section>
+
+<app-vp-section
+  heading="drafting4two"
+  [even]="false"
+  [maxWidth]="true"
+  [links]="d42Links"
+>
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <p>
+        Magic the Gathering is a card game I've been playing off and on since I
+        was in elementary school. This application allows you to draft cards
+        from a set selection of cards in multiple 2 player formats with another
+        user.
+      </p>
+      <ul>
+        <li>Winston - choose from 3 face down piles</li>
+        <li>Pancake - choose from a pack of 11</li>
+        <li>Burn Four - choose 1 and remove 4 from a pack of 15</li>
+        <li>Glimpse - choose 1 and remove 2 from a pack of 15</li>
+        <li>Grid - choose a row or column from a 9 by 9 grid of cards</li>
+        <li>Winchester - choose from one of 4 face up piles</li>
+      </ul>
+    </div>
+    <div class="col-12 col-md-6">
+      <app-img-list class="mb-3 img-list" [list]="d42Images"></app-img-list>
+    </div>
+  </div>
+  <p>This app was developed using PHP and Javascript and hosted via Heroku.</p>
+</app-vp-section>

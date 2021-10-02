@@ -8,45 +8,35 @@ import { headerInfo } from '../data/header';
   styleUrls: ['./dev.component.scss'],
 })
 export class DevComponent implements OnInit {
-  d42Images: Image[] = [
-    {
-      path: '/assets/images/developer/d42-main.PNG',
-      alt: 'd42 main',
-    },
-    {
-      path: '/assets/images/developer/d42-winston.PNG',
-      alt: 'd42 winston',
-    },
-    {
-      path: '/assets/images/developer/d42-deck.PNG',
-      alt: 'd42 deck',
-    },
-    {
-      path: '/assets/images/developer/d42-grid.PNG',
-      alt: 'd42 grid',
-    },
-    {
-      path: '/assets/images/developer/d42-pick.PNG',
-      alt: 'd42 pick',
-    },
-    {
-      path: '/assets/images/developer/d42-burn.PNG',
-      alt: 'd42 burn',
-    },
-  ];
-
-  opsImages: Image[] = [
-    {
-      path: '/assets/images/developer/ops-dashboard.PNG',
-      alt: 'ops dashboard',
-    },
-    {
-      path: '/assets/images/developer/ops-visual.PNG',
-      alt: 'ops visual',
-    },
-  ];
-
   showProjects = false;
+
+  proLinks = [
+    {
+      router: true,
+      label: 'View Résumé',
+      destPath: 'resume',
+    },
+    {
+      router: false,
+      newWindow: true,
+      label: 'Connect on Linkedin',
+      destPath: 'https://www.linkedin.com/in/robert-hosler-885074106/',
+    },
+  ];
+
+  personalLinks = [
+    {
+      router: true,
+      label: 'See my Projects',
+      destPath: '/dev/personal',
+    },
+    {
+      router: false,
+      newWindow: true,
+      label: 'Follow me on Github',
+      destPath: 'https://www.github.com/roberthosler/',
+    },
+  ];
 
   constructor() {}
 
@@ -57,6 +47,5 @@ export class DevComponent implements OnInit {
     setTimeout(() => {
       window.scrollTo(0, top - headerInfo.headerHeight);
     });
-    // el.scrollIntoView();
   }
 }

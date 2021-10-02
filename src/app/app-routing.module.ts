@@ -11,6 +11,9 @@ import { ArtComponent } from './art/art.component';
 import { PersonComponent } from './person/person.component';
 import { ResumeComponent } from './dev/resume/resume.component';
 import { WriteComponent } from './write/write.component';
+import { CreatorComponent } from './pages/creator/creator.component';
+import { WhyQComponent } from './pages/person/why-q/why-q.component';
+import { PersonalComponent } from './pages/dev/personal/personal.component';
 
 export const routes: Routes = [
   {
@@ -20,37 +23,28 @@ export const routes: Routes = [
     children: [
       { path: '', component: DevComponent },
       { path: 'resume', component: ResumeComponent },
+      { path: 'personal', component: PersonalComponent },
     ],
   },
   {
-    path: 'write',
-    data: { name: 'Writer', header: true },
+    path: 'creator',
+    data: { name: 'Creator', header: true },
     component: MainLayoutComponent,
-    children: [{ path: '', component: WriteComponent }],
-  },
-  // {
-  //   path: 'gamer',
-  //   data: { name: 'Gamer', header: true },
-  //   component: MainLayoutComponent,
-  //   children: [{ path: '', component: GamerComponent }],
-  // },
-  {
-    path: 'art',
-    data: { name: 'Artist', header: true },
-    component: MainLayoutComponent,
-    children: [{ path: '', component: ArtComponent }],
+    children: [
+      { path: '', component: CreatorComponent },
+      { path: 'artist', component: ArtComponent },
+      { path: 'writer', component: WriteComponent },
+    ],
   },
   {
     path: 'person',
     data: { name: 'Person', header: true },
     component: MainLayoutComponent,
-    children: [{ path: '', component: PersonComponent }],
-  },
-  {
-    path: 'updates',
-    data: { name: 'Release Info', header: false },
-    component: MainLayoutComponent,
-    children: [{ path: '', component: UpdatesComponent }],
+    children: [
+      { path: '', component: PersonComponent },
+      { path: 'why-q', component: WhyQComponent },
+      { path: 'gamer', component: GamerComponent },
+    ],
   },
   {
     path: 'users',
@@ -68,7 +62,10 @@ export const routes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' }),
+    RouterModule.forRoot(routes, {
+      scrollPositionRestoration: 'enabled',
+      anchorScrolling: 'enabled',
+    }),
   ],
   exports: [RouterModule],
 })

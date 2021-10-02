@@ -1,3 +1,66 @@
-<div class="container viewport-section py-3">
-    <ng-content></ng-content>
+<div
+  [ngClass]="{
+    'bg-purple radial-purple vp-even': even,
+    'bg-green radial-green vp-odd': !even
+  }"
+>
+  <div class="viewport-section d-flex flex-column">
+    <div class="container flex-around flex-grow-1 py-3">
+      <div class="vp-heading" *ngIf="heading || topImgPath">
+        <h2>{{ heading }}</h2>
+        <img *ngIf="topImgPath" class="vp-top-img" [src]="topImgPath" />
+      </div>
+
+      <div
+        class="mx-auto text-justify vp-middle"
+        [ngClass]="{ 'w-75': !maxWidth }"
+      >
+        <ng-content></ng-content>
+      </div>
+
+      <div class="vp-bottom" *ngIf="links || bottomImgPath">
+        <img
+          *ngIf="bottomImgPath"
+          class="vp-bottom-img"
+          [src]="bottomImgPath"
+          [ngClass]="{
+            'vp-bottom-img-left': links && even || !even && !links,
+            'vp-bottom-img-right': !links && even || !even && links
+          }"
+        />
+        <div class="btn-row" *ngIf="links">
+          <ng-container *ngFor="let link of links; let i = index">
+            <a
+              *ngIf="link.router"
+              [routerLink]="link.destPath"
+              [fragment]="link.fragment"
+              class="btn"
+              [ngClass]="{
+                'btn-primary': even && i === 0,
+                'btn-outline-primary': even && i > 0,
+                'btn-secondary': !even && i === 0,
+                'btn-outline-secondary': !even && i > 0
+              }"
+            >
+              {{ link.label }}
+            </a>
+            <a
+              *ngIf="!link.router"
+              [href]="link.destPath"
+              [target]="link.newWindow ? '_blank' : '_self'"
+              class="btn"
+              [ngClass]="{
+                'btn-primary': even && i === 0,
+                'btn-outline-primary': even && i > 0,
+                'btn-secondary': !even && i === 0,
+                'btn-outline-secondary': !even && i > 0
+              }"
+            >
+              {{ link.label }}
+            </a>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

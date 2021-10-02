@@ -11,6 +11,28 @@ export class PersonComponent implements OnInit {
   textArray: string[];
   personalSocialLinks = social.personal;
 
+  sectionOneLinks = [
+    {
+      router: true,
+      label: 'Link One',
+      destPath: '/person'
+    },
+    {
+      router: true,
+      label: 'Link Two',
+      destPath: '/person'
+    }
+  ];
+
+  qLinks = [
+    {
+      router: true,
+      label: 'Read the story',
+      destPath: '/person/why-q',
+      fragment: 'three-letters'
+    }
+  ];
+
   constructor(private httpClient: HttpClient) {}
 
   ngOnInit(): void {

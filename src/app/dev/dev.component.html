@@ -1,180 +1,33 @@
-<div class="">
-  <div class="viewport-section d-flex flex-column radial-purple">
-    <div class="container flex-around flex-grow-1 py-3">
-      <div class="dev-heading">
-        <h2 class="text-left">
-          <span class="sr-only">Professional Experience</span>
-          <img
-            class="img-pro-exp"
-            src="/assets/images/developer/professional-experience.png"
-          />
-        </h2>
-        <img
-          class="img-dev-laptop"
-          src="/assets/images/developer/laptop3.gif"
-        />
-      </div>
-      <div class="w-75 mx-auto text-justify">
-        <p *ngIf="false">
-          I'm a web developer with 8+ years of experience working for Highmark
-          Inc. supporting apps for our subsidiary United Concordia Dental's
-          members. The user's web experience starts and ends with the
-          functionality in their browser, and I want to makе that as smooth and
-          painless as possible.
-        </p>
-        <p>Hey, I'm Roqb.</p>
-        <p>
-          I am a web developer who is passionate about responsive design and
-          creating engaging user experiences.
-        </p>
-      </div>
-      <div class="dev-section">
-        <img class="img-dev-java" src="/assets/images/developer/java.gif" />
-        <div class="btn-row text-right">
-          <a [routerLink]="'resume'" class="btn btn-primary">View Résumé </a>
-          <a
-            class="btn btn-outline-primary"
-            href="https://www.linkedin.com/in/robert-hosler-885074106/"
-            target="_blank"
-            >Connect on Linkedin
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
+<app-vp-section
+  [even]="true"
+  heading="Professional Experience"
+  topImgPath="/assets/images/developer/laptop3.gif"
+  bottomImgPath="/assets/images/developer/java.gif"
+  [links]="proLinks"
+>
+  <p *ngIf="false">
+    I'm a web developer with 8+ years of experience working for Highmark Inc.
+    supporting apps for our subsidiary United Concordia Dental's members. The
+    user's web experience starts and ends with the functionality in their
+    browser, and I want to makе that as smooth and painless as possible.
+  </p>
+  <p>Hey, I'm Roqb.</p>
+  <p>
+    I am a web developer who is passionate about responsive design and creating
+    engaging user experiences.
+  </p>
+</app-vp-section>
 
-  <div class="radial-green">
-    <div class="container viewport-section flex-around py-3">
-      <h2 class="text-right">Personal Projects</h2>
-      <div class="text-center w-75 mx-auto text-justify">
-        <p>
-          In my free time I have occasionally worked on personal app projects
-          related to my interests. A few notable examples are listed below and
-          publicly available on my Github.
-        </p>
-      </div>
-      <div class="btn-row">
-        <button
-          class="btn btn-secondary"
-          (click)="showProjects = true; scroll(projects)"
-        >
-          See my projects
-        </button>
-        <a
-          class="btn btn-outline-secondary"
-          href="https://www.github.com/roberthosler/"
-          target="_blank"
-          >Follow me on Github
-        </a>
-      </div>
-    </div>
-  </div>
-  <div #projects></div>
-  <div *ngIf="showProjects">
-    <app-vp-section>
-      <h3>OPS Type Analyzer</h3>
-      <div class="row">
-        <div class="col-12 col-md-6">
-          <p>
-            The
-            <a
-              href="https://subjectivepersonality.wordpress.com/2020/08/19/what-is-ops/"
-              target="_blank"
-              >Objective Personality System</a
-            >
-            (OPS) is a personality typology system developed by Dave and Shannon
-            Powers based on the theories of Carl Jung. While the more well known
-            Myers Briggs Type Indicator has 16 types, their system adds
-            additional layers of complexity to create 512 unique types. This app
-            generates a type description and visual aid for each of the 512
-            types in the system by combining various definitions for each of the
-            coins.
-          </p>
-          <p>
-            This app is hosted on the
-            <a href="http://subjectivepersonality.com/" target="_blank"
-              >subjectivepersonality domain</a
-            >, which was created to host a wordpress blog that I started with
-            another member of the community in an attempt to better organize and
-            distribute some of the information pertaining to the system to those
-            interested.
-          </p>
-        </div>
-
-        <div class="col-12 col-md-6">
-          <app-img-list class="mb-3 d-block" [list]="opsImages"></app-img-list>
-        </div>
-      </div>
-
-      <p>
-        The app was developed using Angular and first launched in July 2020. As
-        of July 2021 it has served over 2000 unique visitors according to Google
-        Analytics data. It is hosted by Heroku.
-      </p>
-      <p>
-        <a
-          class="btn btn-primary mr-2 mb-2"
-          href="http://app.subjectivepersonality.com/analyzer"
-          target="_blank"
-          >Launch Type Analyzer</a
-        >
-        <a
-          class="btn btn-outline-secondary mr-2 mb-2"
-          href="https://github.com/RobertHosler/ops-type-points/"
-          target="_blank"
-          >View on Github</a
-        >
-        <a
-          class="btn btn-outline-secondary mb-2"
-          href="https://subjectivepersonality.wordpress.com/2020/08/19/what-is-ops/"
-          target="_blank"
-          >Learn about OPS</a
-        >
-      </p>
-    </app-vp-section>
-
-    <div class="border-top-green">
-      <app-vp-section>
-        <h3>drafting4two</h3>
-        <div class="row">
-          <div class="col-12 col-md-6">
-            <p>
-              Magic the Gathering is a card game I've been playing off and on
-              since I was in elementary school. This application allows you to
-              draft cards from a set selection of cards in multiple 2 player
-              formats with another user.
-            </p>
-            <ul>
-              <li>Winston - choose from 3 face down piles</li>
-              <li>Pancake - choose from a pack of 11</li>
-              <li>Burn Four - choose 1 and remove 4 from a pack of 15</li>
-              <li>Glimpse - choose 1 and remove 2 from a pack of 15</li>
-              <li>Grid - choose a row or column from a 9 by 9 grid of cards</li>
-              <li>Winchester - choose from one of 4 face up piles</li>
-            </ul>
-          </div>
-          <div class="col-12 col-md-6">
-            <app-img-list
-              class="mb-3 d-block"
-              [list]="d42Images"
-            ></app-img-list>
-          </div>
-        </div>
-        <p>
-          This app was developed using PHP and Javascript and hosted via Heroku.
-        </p>
-        <p>
-          <a class="btn btn-primary" href="http://d42.roqb.me/" target="_blank"
-            >Launch drafting4two</a
-          >
-          <a
-            class="ml-2 btn btn-outline-secondary"
-            href="https://github.com/RobertHosler/drafting4two"
-            target="_blank"
-            >View on Github</a
-          >
-        </p></app-vp-section
-      >
-    </div>
-  </div>
-</div>
+<app-vp-section
+  [even]="false"
+  heading="Personal Projects"
+  topImgPath="/assets/images/developer/java.gif"
+  bottomImgPath="/assets/images/developer/laptop3.gif"
+  [links]="personalLinks"
+>
+  <p>
+    In my free time I've worked on some personal app projects related to my
+    interests. You can learn more about the more notable examples here and check
+    them out on my Github.
+  </p>
+</app-vp-section>

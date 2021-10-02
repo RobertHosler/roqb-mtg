@@ -1,7 +1,48 @@
-<div class="container py-3">
-  <div *ngFor="let row of textArray">
-    <p [innerHtml]="row"></p>
+<app-vp-section
+  [even]="true"
+  heading="Person"
+  bottomImgPath="/assets/images/developer/java.gif"
+>
+  <p>
+    My name is Robert Hosler and I'm a web developer currently based in
+    Pittsburgh, PA. I created this website to share apps with my friends, show
+    off some of my old artwork, and generally just craft my own little place
+    here on the web.
+  </p>
+  <div>
+    I recently married my wife Jenny in August of 2020 and we live in
+    Pittsburgh, Pennsylvania with our two cats, Ebby and Joseph.
   </div>
+</app-vp-section>
 
-  <app-social-links [socialLinks]="personalSocialLinks"></app-social-links>
-</div>
+<app-vp-section
+  id="rob-q"
+  [even]="false"
+  heading="Rob with a Q?"
+  topImgPath="/assets/images/roqb-rotate.gif"
+  [links]="qLinks"
+>
+  <p>
+    You may have noticed by now that you are on <em>Roqb.me</em> and not
+    <em>RobertHosler.me</em>. You may be wondering why the 'q' is in my name, or
+    maybe how to pronounce it. rock-bee? rah-q-bee? row-cube-e?
+  </p>
+  <p>
+    Well the pronunciation is easy... I don't even pronounce the 'q' at all. It
+    is just Rob. Or at least that is what <em>I say</em>. Others have chosen to
+    pronounce it in all kinds of ways.
+  </p>
+  <p>As for the WHY, well that is a bit of a longer story...</p>
+</app-vp-section>
+
+<app-vp-section heading="Contact" [even]="true">
+  <div class="text-center">
+    <p>
+      Below are some links to social media accounts where you can follow or
+      connect with me.
+    </p>
+  </div>
+  <div class="social-wrapper">
+    <app-social-links [socialLinks]="personalSocialLinks"></app-social-links>
+  </div>
+</app-vp-section>

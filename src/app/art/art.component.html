@@ -1,78 +1,38 @@
-<div class="viewport-section d-flex flex-column radial-purple">
-  <div class="container flex-around flex-grow-1 py-3">
-    <h1>An Accidental Artist</h1>
-
+<app-vp-section heading="State of Individuality" [links]="soiLinks">
+  <div class="w-85 ml-auto text-right">
     <p>
-      My relationship with art began almost by accident. In high school I wanted
-      to take a computer design course, but it ended up being filled with other
-      students who received priority. Rather than take a study hall I decided to
-      try a drawing and painting course. This course ended up challenging us
-      each week to create a unique sketch based on a theme each week. This is
-      something that really captured my imagination and something I really miss
-      about my high school art classes. When I went to college I wanted to keep
-      taking art classes and asked if a double major was even possible since
-      there would be no overlapping coursework. I made it happen. Here I'll
-      present some of my favorite creations.
+      One of my favorite works from college was a video I made using Photoshop
+      and a song by the band STRFKR featuring a portion of a lecture by Alan
+      Watts. The work was orginally inspired by the following quote from William
+      James.
     </p>
-    <div class="btn-row text-right">
-      <a
-        class="btn btn-primary"
-        href="https://imgur.com/a/MsKtf8D"
-        target="_blank"
-        >Go to Album</a
-      >
-    </div>
   </div>
-</div>
-<div class="bg-green radial-green">
-  <div class="container viewport-section flex-around py-3">
-    <h2>College Works</h2>
-    <div class="text-right">
-      <h3>State of Individuality</h3>
+
+  <figure class="w-75 ml-auto">
+    <blockquote>
       <p>
-        One of my favorite works from college was a video I made using Photoshop
-        and a song by the band STRFKR featuring a portion of a lecture by Alan
-        Watts. The work was orginally inspired by the following quote from
-        William James.
+        "Time keeps budding into new moments, every one of which presents a
+        content which in its individuality never was before and will never be
+        again."
       </p>
-    </div>
+    </blockquote>
+    <figcaption>
+      —William James, <cite>Some Problems of Philosophy</cite>
+    </figcaption>
+  </figure>
 
-    <figure class="w-75 ml-auto">
-      <blockquote>
-        <p>
-          "Time keeps budding into new moments, every one of which presents a
-          content which in its individuality never was before and will never be
-          again."
-        </p>
-      </blockquote>
-      <figcaption>
-        —William James, <cite>Some Problems of Philosophy</cite>
-      </figcaption>
-    </figure>
-    <iframe
-      *ngIf="false"
-      width="560"
-      height="315"
-      src="https://www.youtube.com/embed/EWJpFQZN6l8"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
-    ></iframe>
-    <p>
-      <a
-        class="btn btn-secondary"
-        href="https://www.youtube.com/watch?v=EWJpFQZN6l8"
-        target="_blank"
-        >View on YouTube</a
-      >
-    </p>
-    <p *ngIf="false">
-      This work would go on to inspire my Senior Art Project, which I have more
-      mixed feelings about but took on a similar approach.
-    </p>
-  </div>
-</div>
+  <iframe
+    *ngIf="false"
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/EWJpFQZN6l8"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+  ></iframe>
+</app-vp-section>
+
 <div *ngIf="false">
   <h3>College Album</h3>
 
@@ -92,24 +52,22 @@
 
   <h2 *ngIf="false">High School Works</h2>
 </div>
-<div class="bg-green radial-purple">
-  <div class="container viewport-section flex-around py-3">
-    <h2>MTG Alters and Proxies</h2>
-    <p>
-      Magic the Gathering is a card game I've been playing for many years.
-      Sometimes people paint on the cards to alter them in some way. Either
-      creating new art or extending the existing art in some way. I've dabbled
-      in this in the past and even created proxy cards which are meant to
-      represent a real card without actually having the card.
-    </p>
 
-    <div class="btn-row text-right">
-      <a
-        class="btn btn-primary"
-        href="https://imgur.com/a/fdj4O"
-        target="_blank"
-        >Go to Album</a
-      >
-    </div>
-  </div>
-</div>
+<app-vp-section
+  [even]="false"
+  heading="MTG Alters and Proxies"
+  [links]="mtgLinks"
+>
+  <p>
+    Magic the Gathering is a card game I've been playing for many years.
+    Sometimes people paint on the cards to alter them in some way, either
+    creating new art or extending the existing art.
+  </p>
+  <p>
+    I've dabbled in this in the past and created "proxy cards" which can stand
+    in for a real card without actually having the card to play the game. This
+    can be useful for particularly expensive cards as a single card can
+    sometimes cost over a hundred dollars, but is also just a fun way to explore
+    different kinds of art within the game.
+  </p>
+</app-vp-section>

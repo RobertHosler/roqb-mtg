@@ -1,0 +1,92 @@
+@import "~src/assets/variables";
+@import "node_modules/bootstrap/scss/mixins/_breakpoints";
+
+.viewport-section {
+  position: relative;
+}
+.vp-bottom,
+.vp-heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.vp-middle {
+}
+.vp-top-img,
+.vp-bottom-img {
+  max-height: 25vh;
+  max-width: 25vw;
+}
+.vp-even {
+  .vp-top-img {
+    top: 10%;
+    right: 5%;
+  }
+  .vp-bottom .btn-row {
+    text-align: right;
+  }
+}
+.vp-odd {
+  .vp-heading {
+    justify-content: space-between;
+  }
+  h2 {
+    order: 2;
+  }
+  .vp-top-img {
+    order: 1;
+    top: 5%;
+    left: 5%;
+  }
+  .vp-bottom-img {
+    order: 1;
+    bottom: 5%;
+    right: 5%;
+  }
+}
+.vp-bottom-img.vp-bottom-img-left {
+  bottom: 10%;
+  left: 5%;
+  margin-right: auto;
+}
+.vp-bottom-img.vp-bottom-img-right {
+  bottom: 10%;
+  right: 5%;
+  margin-left: auto;
+}
+@include media-breakpoint-up(lg) {
+  .vp-top-img,
+  .vp-bottom-img {
+    position: absolute;
+  }
+  .vp-bottom .btn-row {
+    width: 100%;
+  }
+  .vp-odd {
+    .vp-heading {
+      justify-content: flex-end;
+    }
+  }
+}
+@include media-breakpoint-down(sm) {
+  .vp-bottom,
+  .vp-heading {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .vp-top-img,
+  .vp-bottom-img {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+  }
+  .vp-odd {
+    .vp-top-img {
+      order: 2;
+    }
+    .btn-row {
+      order: 2;
+    }
+  }
+}

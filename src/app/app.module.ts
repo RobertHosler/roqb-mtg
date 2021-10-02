@@ -25,6 +25,9 @@ import { SocialLinksComponent } from './components/social-links/social-links.com
 import { WriteComponent } from './write/write.component';
 import { PageHeadingComponent } from './components/page-heading/page-heading.component';
 import { VpSectionComponent } from './components/vp-section/vp-section.component';
+import { CreatorComponent } from './pages/creator/creator.component';
+import { PersonalComponent } from './pages/dev/personal/personal.component';
+import { WhyQComponent } from './pages/person/why-q/why-q.component';
 
 
 const socketConfig: SocketIoConfig = { url: 'http://localhost:3080', options: {} };
@@ -48,7 +51,10 @@ const socketConfig: SocketIoConfig = { url: 'http://localhost:3080', options: {}
     SocialLinksComponent,
     WriteComponent,
     PageHeadingComponent,
-    VpSectionComponent
+    VpSectionComponent,
+    CreatorComponent,
+    PersonalComponent,
+    WhyQComponent
   ],
   imports: [
     BrowserModule,
