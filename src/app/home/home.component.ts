@@ -47,7 +47,7 @@ export class HomeComponent implements OnInit {
   };
 
   creatorCard: HomeCard = {
-    href: '/write',
+    href: '/creator',
     title: 'Creator',
     description: 'blogging, drawing, and creating stuff around the web',
     class: 'write-card',
