@@ -1,6 +1,81 @@
 @import "~src/assets/variables";
 @import "~node_modules/bootstrap/scss/mixins/breakpoints";
 
+.resume-img {
+  display: block;
+  border-radius: 100%;
+  width: 225px;
+  max-width: 100%;
+  border: 5px solid $youtube-purple;
+}
+.resume-img:hover {
+  // box-shadow: -5px 5px 20px black;
+  // margin-left: 5px;
+}
+.resume-img-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  justify-content: center;
+}
+.resume-top {
+  ul.resume-contact {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    // justify-content: space-around;
+    li {
+      margin-left: 2rem;
+    }
+    @include media-breakpoint-down("sm", $grid-breakpoints) {
+      flex-direction: column;
+    }
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+}
+@include media-breakpoint-down("md", $grid-breakpoints) {
+  .resume-img {
+    width: 150px;
+    max-width: 100%;
+  }
+}
+@include media-breakpoint-down("sm", $grid-breakpoints) {
+  .resume-img-wrapper {
+    height: 150px;
+    flex-direction: row;
+  }
+}
+.colored {
+  .resume-top {
+    background: $youtube-purple;
+    color: $light;
+    a {
+      color: $light;
+    }
+  }
+  .resume-img {
+    border: 2px solid $light;
+  }
+  @media print {
+    h1,h2,h3 {
+      text-align: left !important;
+    }
+    .resume-top {
+      background: none;
+      color: $dark;
+    }
+    .resume-img-wrapper {
+      display: none;
+    }
+    a {
+      color: $dark !important;
+      text-decoration: none !important;
+    }
+  }
+}
+
 .margin-me {
   margin-bottom: 0.5rem;
 }
@@ -13,6 +88,10 @@
 .date-range {
   font-family: $secondary-font-family;
   font-size: 1.25rem;
+}
+.date-cert {
+  font-family: $secondary-font-family;
+  font-size: 1rem;
 }
 
 .intro {
@@ -38,6 +117,28 @@ h2 {
   text-align: center;
 }
 
+.skill-bars {
+  display: flex;
+  margin-bottom: 0.5rem;
+  max-width: 450px;
+  .bar-label {
+    width: 30%;
+    text-align: right;
+    padding-right: 0.5rem;
+    line-height: 1rem;
+    font-size: 0.9rem;
+    font-family: monospace;
+  }
+  .progress {
+    width: 70%;
+    background: none;
+    border-radius: 0px;
+    .progress-bar {
+      background-color: $youtube-purple;
+    }
+  }
+}
+
 .skills-col {
   p {
     margin-bottom: 0.25rem;
@@ -58,20 +159,25 @@ h2 {
 
 @include media-breakpoint-up("lg", $grid-breakpoints) {
   .skills-col {
-    border-top: 2px solid #ccc;
-    border-left: 2px solid #ccc;
-    background-color: #efefef;
-    padding: 1rem;
     border-top-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    box-shadow: 5px 5px 7px #666;
+    background-color: #efefef;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    &:hover {
+      background-color: $soft-green;
+      box-shadow: 5px 5px 7px #666;
+    }
     p {
       font-size: 0.9rem;
       // line-height: 2rem;
     }
     h2 {
       text-align: left;
-      font-size: 1.5rem;
+      font-size: 1.35rem;
+    }
+    h3 {
+      font-size: 1.25rem;
     }
   }
 }
@@ -85,10 +191,11 @@ h4 {
 }
 
 .resume-wrapper {
-  position:relative;
+  position: relative;
 }
 .resume-buttons {
-  a, button {
+  a,
+  button {
     display: inline-block;
     margin-bottom: 1rem;
   }
@@ -119,4 +226,27 @@ hr {
   // background: $isabelline;
   // border: 1px solid $youtube-green;
   border-radius: 5px;
+}
+
+@include media-breakpoint-up("lg", $grid-breakpoints) {
+  .cert-bullets {
+    padding-left: 0;
+    li {
+      display: flex;
+      justify-content: space-between;
+    }
+    li::marker {
+      content: "";
+    }
+  }
+}
+
+.education {
+  font-size: 0.9rem;
+  h3 {
+    font-size: 1.5rem * 0.9;
+  }
+  .date-range {
+    font-size: 1.25rem * 0.9;
+  }
 }

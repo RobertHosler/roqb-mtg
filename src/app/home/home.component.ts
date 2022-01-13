@@ -35,6 +35,7 @@ export class HomeComponent implements OnInit {
     title: 'Artist',
     description: 'A bonafide doodler and painter', //Adept, Proficient, Certified
     class: 'art-card',
+    
   };
 
   writeCard: HomeCard = {

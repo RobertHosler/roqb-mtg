@@ -99,6 +99,9 @@ h3 {
     width: 100%;
   }
 }
+.thick-border-bottom--purple {
+  border-bottom: 5px solid $youtube-purple;
+}
 a:hover .thick-border-bottom {
   border-bottom: 5px solid $youtube-purple;
 }
@@ -217,6 +220,9 @@ figure {
     &::before {
       border-bottom: 2px solid $light;
     }
+  }
+  a:hover:not(.nav-link) {
+    color: $kelly-green;
   }
 }
 .bg-green {
