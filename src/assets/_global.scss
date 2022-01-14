@@ -145,6 +145,7 @@ blockquote {
 figure {
   padding: 15px;
   background: $soft-green;
+  color: $dark;
   border-radius: 5px;
   blockquote {
     font-size: 1.25rem;
@@ -221,13 +222,19 @@ figure {
       border-bottom: 2px solid $light;
     }
   }
-  a:hover:not(.nav-link) {
+  a:hover {
     color: $kelly-green;
   }
+  a:hover.nav-link,
+  a:hover.btn-primary,
+  a:hover.btn-outline-primary {
+    color: $light;
+  } 
 }
 .bg-green {
   figure {
     background: $youtube-light-purple;
+    color: $dark;
   }
 }
 
