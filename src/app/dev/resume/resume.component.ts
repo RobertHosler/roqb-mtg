@@ -37,7 +37,7 @@ export class ResumeComponent implements OnInit {
           end: 'Present',
           bullets: [
             'Responsible for updates to responsive member-facing JSF and Angular applications and websites',
-            'Built SpringBoot MicroServices using Swagger and Lombok, creating new entrypoints for accessing data through asynchrous retrievals',
+            'Built SpringBoot MicroServices using Swagger and Lombok, creating new entry points for accessing data through asynchronous retrievals',
             'Completed website modernization project using Angular SPA, Adobe Experience Manager, Bootstrap, and SASS - updating the end user and content authoring experiences',
             'Created CMS backed 20+ web components using Adobe Experience Manager and TeamSite Platforms',
             // 'Implemented new image submission form integrating multiple existing processes so that providers could add claim images when required without refiling.',
@@ -64,7 +64,7 @@ export class ResumeComponent implements OnInit {
             'Implemented IBM Digital Analytics page and event tracking into applications across 7+ domains',
             'Increased JUnit code coverage of critical application areas using EasyMock',
             'Improved approval process workflow for TeamSite content management solution used by the entire team for production updates',
-            'Developed new langing page for Government insurance contract, using Struts and JSP for new open enrollment season',
+            'Developed new landing page for Government insurance contract, using Struts and JSP for new open enrollment season',
           ],
         },
       ],
