@@ -10,8 +10,8 @@
               (mouseleave)="hoverImg = false"
               [src]="
                 !hoverImg
-                  ? '/assets/images/developer/resume-roqb.jfif'
-                  : '/assets/images/developer/dev-resume2.jpg'
+                  ? '/assets/images/developer/dev-resume2.jpg'
+                  : '/assets/images/developer/resume-roqb.jfif'
               "
             />
           </div>
@@ -23,10 +23,8 @@
             applications, Android, and Angular as part of an Agile Team.
           </p>
           <p>
-            Creates responsive and engaging web experiences for all screen
-            sizes. Proven ability to quickly learn and apply new technologies.
-            Writes maintainable solutions for an ever changing environment.
-            Positive contributor and effective communicator.
+            Creates responsive, maintainable and engaging web experiences for all screen
+            sizes. Proven ability to quickly learn and apply new technologies and distribute that knowledge through effective communication.
           </p>
         </div>
       </div>
@@ -108,7 +106,7 @@
 
 <ng-template #skillBars>
   <div class="skill-bar-section skills-col">
-    <h3>Prowess</h3>
+    <h3>Skills</h3>
     <div class="skill-bars d-print-none" *ngFor="let skill of skills">
       <div class="bar-label">{{ skill.name }}</div>
       <div class="progress">
@@ -195,7 +193,7 @@
 
 <ng-template #certications>
   <div>
-    <h3>Augmentation</h3>
+    <h3>Training</h3>
     <ul class="cert-bullets">
       <li *ngFor="let cert of certifications">
         {{ cert.name }} <span class="date-cert">{{ cert.year }}</span>
@@ -206,7 +204,7 @@
 
 <ng-template #hobbySection>
   <div>
-    <h3>Recreation</h3>
+    <h3>Interests</h3>
     <ul class="cert-bullets">
       <li *ngFor="let hobby of hobbies">
         {{ hobby }}

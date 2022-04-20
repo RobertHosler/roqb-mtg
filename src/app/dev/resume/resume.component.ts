@@ -36,19 +36,19 @@ export class ResumeComponent implements OnInit {
           start: '2015',
           end: 'Present',
           bullets: [
-            'Responsible for updates to responsive member-facing JSF and Angular applications and websites',
+            'Responsible for designing and coding front-end and back-end updates to responsive member-facing JSF and Angular web applications.',
+            'Completed website modernization project using Angular SPA, Adobe Experience Manager (AEM), Bootstrap, and SASS.',
+            'Created CMS backed web components using AEM and TeamSite, enabling flexible and user-friendly authoring experiences.',
             'Built SpringBoot MicroServices using Swagger and Lombok, creating new entry points for accessing data through asynchronous retrievals',
-            'Completed website modernization project using Angular SPA, Adobe Experience Manager, Bootstrap, and SASS - updating the end user and content authoring experiences',
-            'Created CMS backed 20+ web components using Adobe Experience Manager and TeamSite Platforms',
             // 'Implemented new image submission form integrating multiple existing processes so that providers could add claim images when required without refiling.',
             'Designed and developed new Android app in Android Pie (9.0) with support back to KitKat (4.4), biometric authentication, multiple themes, REST service integration, local data and profile caching.',
             // 'Updated member facing applications with Twitter Bootstrap to create responsive user experiences.',
-            'Achieved code coverage levels of over 85% in applications using JUnit, Mockito, and Jasmine',
+            'Improved documentation and unit testing practices with code coverage levels over 85% in all applications using JUnit, Mockito, and Jasmine.',
             // 'Built CMS driven applications using TeamSite and Adobe Experience Manager',
             // 'Developed ',
-            'Led and Mentored junior developers on best practices, technologies, and design principles',
-            'Participated in internal leadership training program, working alongside a team to create engaging presentations',
-            'Organized company sponsored events, team lunch activities, and board game meetings',
+            // 'Participated in internal leadership training program, working alongside a team to create engaging presentations',
+            'Led and mentored other developers on best practices, technologies, and design principles.  Selected for internal leadership program.',
+            'Organized events, team outings, and games to increase community engagement, proving to be a positive contributor.',
             // 'SSO'
             // Databases
             // Angular
@@ -60,11 +60,12 @@ export class ResumeComponent implements OnInit {
           end: '2015',
           bullets: [
             // 'Developed updates to registration logic allowing members with the same date of birth to register',
-            'Responsible for updating 5+ enterprise Java applications using JSF, CDI, AJAX, and Bootstrap',
-            'Implemented IBM Digital Analytics page and event tracking into applications across 7+ domains',
-            'Increased JUnit code coverage of critical application areas using EasyMock',
-            'Improved approval process workflow for TeamSite content management solution used by the entire team for production updates',
-            'Developed new landing page for Government insurance contract, using Struts and JSP for new open enrollment season',
+            'Responsible for updating 5+ enterprise Java applications using JSF, CDI, AJAX, and Bootstrap.',
+            'Created form enabling users to submit claims from existing data.',
+            'Implemented IBM Digital Analytics page and event tracking into applications across 7+ domains for increased consumer awareness.',
+            'Increased JUnit code coverage of critical application areas using EasyMock.',
+            'Updated approval process workflow for TeamSite content management solution used by the entire team for production updates.',
+            'Developed new landing page for a government insurance contract, using Struts and JSP for new open enrollment season.',
           ],
         },
       ],
@@ -99,7 +100,7 @@ export class ResumeComponent implements OnInit {
     },
     {
       level: 13,
-      name: 'AEM / CMS',
+      name: 'AEM | CMS',
     },
     {
       level: 8,
@@ -115,8 +116,12 @@ export class ResumeComponent implements OnInit {
     },
     {
       level: 19,
-      name: 'Adaptable',
+      name: 'Adaptability',
     },
+    // {
+    //   level: 17,
+    //   name: 'Proactivity',
+    // },
     {
       level: 18,
       name: 'Modesty',
@@ -129,10 +134,10 @@ export class ResumeComponent implements OnInit {
       start: "2009",
       end: "2013",
       bullets: [
-        'Followed dual passion for technology and art, completing Bachelor\'s in Computer Science and Studio Art',
-        'Created Android application during Summer Internships in 2011 & 2012 - virtual tour and event info for campus',
-        'Worked as Head Lab Assistant from 2010 to 2013, leading a team of 10+ fellow students',
-        "Awarded Vickroy Scholarship and Dean's List recognition",
+        'Followed dual passion for technology and art, graduating with Bachelor\'s in Computer Science and Studio Art.',
+        'Created Android application during Summer Internships in 2011 & 2012 - virtual tour and event info for campus.',
+        'Worked as Head Lab Assistant from 2010 to 2013, leading a team of 10+ fellow students.',
+        "Awarded Vickroy Scholarship and Dean's List recognition.",
         // "Represented LVC in programming competitions"
         // "Founder of Magic the Gathering Club, Member of Art and Math Clubs"
       ],
@@ -205,10 +210,11 @@ export class ResumeComponent implements OnInit {
   ];
 
   hobbies = [
-    'Table-top & Video Games',
-    'Magic the Gathering',
+    // 'Magic the Gathering',
     'Drawing & Painting',
-    'Personality Theory'
+    'Personality Theory',
+    'Reality TV',
+    'Table-top & Video Games',
   ];
 
   constructor() {}
