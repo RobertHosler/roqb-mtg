@@ -16,7 +16,7 @@ export class CreatorComponent implements OnInit {
     {
       router: false,
       newWindow: true,
-      label: 'Roqb in Reality',
+      label: 'YouTube Channel',
       destPath: 'https://www.youtube.com/c/RoqbinReality/',
     },
     {

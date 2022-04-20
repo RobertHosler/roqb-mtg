@@ -37,7 +37,7 @@ const s1 = {
   text: [
     'Why hello there, and thank you for stopping by my website.',
     `My name is Robert Hosler and I'm a web developer, gamer, and sometimes artist. I created this website to share apps with my friends, show off some of my old artwork, and generally just craft my own little place here on the web. `,
-    'I recently married my wife Jenny in August 2020 and we live in Pittsburgh, Pennsylvania with our two cats, Ebby and Joseph.',
+    'I recently married my wife Jenny in August of 2020 and we live in Philadelphia, Pennsylvania with our two cats, Ebby and Joseph.',
   ],
 };
 
@@ -46,7 +46,7 @@ const s2 = {
   text: [
     "I'm originally from the suburbs of Harrisburg and attended Central Dauphin High School (2009) where I was a member of the school choir. My next 4 years were spent at Lebanon Valley College (class of 2013), where I double majored in Computer Science and Studio Art, a combination which encouraged me to strech my creativity and challenge me in a variety of ways.",
     "Since college I've been working for Highmark Inc, in the dental division supporting United Concordia Dental Insurance. Much of my work has been on My Dental Benefits, a web application which allows members to view there claims and benefits information.",
-    'In 2017 I moved to Pittsburgh after my lovely girlfriend (now wife) Jenny moved there for grad school where she is working on her doctorate in Chemistry.',
+    'In 2017 I moved to Pittsburgh after my lovely girlfriend (now wife) Jenny moved there for grad school where she is working on her doctorate in Chemistry.  In 2022 we migrated to Philadelphia for her to pursue a career in consulting.'
   ],
 };
 
