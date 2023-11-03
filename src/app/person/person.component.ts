@@ -8,6 +8,7 @@ import { social } from '../data/social-links';
   styleUrls: ['./person.component.css'],
 })
 export class PersonComponent implements OnInit {
+
   textArray: string[];
   personalSocialLinks = social.personal;
 
@@ -27,7 +28,7 @@ export class PersonComponent implements OnInit {
   qLinks = [
     {
       router: true,
-      label: 'Read the story',
+      label: 'Read the Q story',
       destPath: '/person/why-q',
       fragment: 'three-letters'
     }

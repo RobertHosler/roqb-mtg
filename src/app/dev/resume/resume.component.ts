@@ -32,9 +32,21 @@ export class ResumeComponent implements OnInit {
       employer: 'Highmark Inc.',
       roles: [
         {
+        name: 'Senior Application Developer',
+        start: '2022',
+        end: 'Present',
+        bullets: [
+          'Leading team of developers in designing and coding front-end and back-end updates to responsive member-facing web applications.',
+          'Distributing work amongst team members according to their skill sets.',
+          'Providing project estimates, collaborating with product customers, and creating technical designs documents.',
+          'Integrated multiple data sources using REST to support new benefits page.',
+          'Migrated CMS from TeamSite to AEM, enabling a modern authoring experience.',
+        ],
+      },
+        {
           name: 'Application Developer',
           start: '2015',
-          end: 'Present',
+          end: '2022',
           bullets: [
             'Responsible for designing and coding front-end and back-end updates to responsive member-facing JSF and Angular web applications.',
             'Completed website modernization project using Angular SPA, Adobe Experience Manager (AEM), Bootstrap, and SASS.',
