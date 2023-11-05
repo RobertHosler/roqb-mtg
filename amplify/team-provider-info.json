@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-roqbmtg-dev-175347-authRole",
+      "UnauthRoleArn": "arn:aws:iam::425059387953:role/amplify-roqbmtg-dev-175347-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::425059387953:role/amplify-roqbmtg-dev-175347-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-roqbmtg-dev-175347-deployment",
+      "UnauthRoleName": "amplify-roqbmtg-dev-175347-unauthRole",
+      "StackName": "amplify-roqbmtg-dev-175347",
+      "StackId": "arn:aws:cloudformation:us-east-2:425059387953:stack/amplify-roqbmtg-dev-175347/2edcb4a0-7c2e-11ee-8cec-06612066e8d5",
+      "AmplifyAppId": "d1yoag8o3w8bpz"
+    }
+  }
+}
