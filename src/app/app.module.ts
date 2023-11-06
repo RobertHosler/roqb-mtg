@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AmplifyAuthenticatorModule } from '@aws-amplify/ui-angular';
 import { UpdatesComponent } from './updates/updates.component';
 import { NgxBootstrapIconsModule, allIcons } from 'ngx-bootstrap-icons';
 import { HeaderComponent } from './header/header.component';
@@ -59,6 +60,8 @@ const socketConfig: SocketIoConfig = { url: 'http://localhost:3080', options: {}
   imports: [
     BrowserModule,
     AppRoutingModule,
+    /* configure App with AmplifyAuthenticatorModule */
+    AmplifyAuthenticatorModule,
     HttpClientModule,
     FormsModule,
     SocketIoModule.forRoot(socketConfig),

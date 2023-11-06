@@ -27,6 +27,12 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/assets/styles.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/assets",
+                "node_modules/bootstrap/scss/mixins"
+              ]
+            },
             "scripts": []
           },
           "configurations": {
@@ -37,14 +43,14 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "optimization": true,
+              "optimization": false,
               "outputHashing": "all",
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": true,
+              "buildOptimizer": false,
               "budgets": [
                 {
                   "type": "initial",
