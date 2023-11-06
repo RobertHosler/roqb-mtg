@@ -10,6 +10,14 @@
       "StackName": "amplify-roqbmtg-dev-175347",
       "StackId": "arn:aws:cloudformation:us-east-2:425059387953:stack/amplify-roqbmtg-dev-175347/2edcb4a0-7c2e-11ee-8cec-06612066e8d5",
       "AmplifyAppId": "d1yoag8o3w8bpz"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d1yoag8o3w8bpz",
+          "type": "manual"
+        }
+      }
     }
   }
 }
